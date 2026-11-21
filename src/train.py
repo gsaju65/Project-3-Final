@@ -104,7 +104,7 @@ def git_commit():
 def save_examples(data_dir, labels, test, seed):
     """Copy a few test-flight crops to frontend/examples/. The model never trained on these flights."""
     shutil.rmtree(EXAMPLES, ignore_errors=True)
-    EXAMPLES.mkdir(parents=True)
+    EXAMPLES.mkdir(parents=True, exist_ok=True)
     pool = labels.iloc[test]
     pool = pool[pool[["w", "h"]].min(axis=1) >= EXAMPLE_MIN_SIDE_PX].sample(frac=1, random_state=seed)
     for label, group in pool.groupby("label"):
