@@ -15,6 +15,7 @@ mlruns/
 mlruns_docker/
 mlartifacts/
 *.db
+models_docker/
 
 # Local test files
 request.json
