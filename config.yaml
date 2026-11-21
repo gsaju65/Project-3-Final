@@ -3,7 +3,7 @@ data:
   bucket: drone-clf-data-gs
   object: visdrone-crops-v1.zip
   url: https://storage.googleapis.com/drone-clf-data-gs/visdrone-crops-v1.zip
-  sha256: FILL_IN_AFTER_PHASE_2
+  sha256: 35e04386be406a4914c85293202961d6fda1ed5b941c3aad8ea525fb02dbe150
   local_dir: data/cloud
 prepare: {min_side_px: 20, max_occlusion: 1, max_per_sequence: 40}
 features: {crop_px: 48, orientations: 9, pixels_per_cell: 8, cells_per_block: 2}
