@@ -1,0 +1,5 @@
+model,val_accuracy,val_macro_f1,test_accuracy,test_macro_f1
+baseline,0.383,0.139,,
+logistic_regression,0.597,0.563,,
+random_forest,0.619,0.507,,
+svm,0.677,0.633,0.771,0.734
