@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+
+# Data (raw download, cleaned zip, cloud download)
+data/
+*.zip
+
+# Trained models and MLflow runs (the pipeline re-creates them)
+models/
+mlruns/
+mlruns_docker/
+mlartifacts/
+*.db
+
+# Local test files
+request.json
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/

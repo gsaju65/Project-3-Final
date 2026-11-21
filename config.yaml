@@ -1,0 +1,19 @@
+seed: 42
+data:
+  bucket: drone-clf-data-gs
+  object: visdrone-crops-v1.zip
+  url: https://storage.googleapis.com/drone-clf-data-gs/visdrone-crops-v1.zip
+  sha256: FILL_IN_AFTER_PHASE_2
+  local_dir: data/cloud
+prepare: {min_side_px: 20, max_occlusion: 1, max_per_sequence: 40}
+features: {crop_px: 48, orientations: 9, pixels_per_cell: 8, cells_per_block: 2}
+split: {test_size: 0.2, val_size: 0.2}
+selection_metric: val_accuracy
+models:
+  logistic_regression: {C: 0.1, max_iter: 3000}
+  random_forest: {n_estimators: 300}
+  svm: {C: 10, gamma: scale}
+mlflow:
+  tracking_uri: sqlite:///mlruns/mlflow.db
+  experiment: drone-object-classifier
+  registered_model: drone-object-classifier
